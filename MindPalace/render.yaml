@@ -1,14 +1,9 @@
 services:
-  - type: web
-    name: intellekt-bot
+  - type: worker
+    name: mindpalace-bot
     env: python
-    buildCommand: pip install -r pyproject.toml
-    startCommand: python main.py
-    plan: free
+    buildCommand: "pip install aiogram aiohttp aiofiles"
+    startCommand: "python main.py"
     envVars:
       - key: BOT_TOKEN
         sync: false
-      - key: WEBHOOK_HOST
-        value: https://intellekt-bot.onrender.com
-      - key: PORT
-        value: 8000
