@@ -1,0 +1,63 @@
+Replit Agent uchun Yakuniy Ko'rsatma (Prompt)
+Project Name: Intellekt Bot
+
+Project Description:
+Create a Telegram bot using Python and the aiogram library. The bot, named "Intellekt Bot", will function as an educational tool to help users learn English words. The primary features include teaching new English words with their Uzbek translations and quizzing the user to test their knowledge. The entire user-facing interface must be in the Uzbek language.
+
+Core Requirements:
+
+Platform & Language:
+
+Platform: Telegram
+
+Programming Language: Python 3.10+
+
+Telegram Bot Library: aiogram (latest version)
+
+Key Features:
+
+/start Command: When a user first starts the bot, it should greet them in Uzbek and present a main menu with two primary buttons: "Yangi so'z o'rganish" (Learn a new word) and "Testni boshlash" (Start the test).
+
+Learn a New Word (/yangi_soz):
+
+When the "Yangi so'z o'rganish" button is pressed, the bot should send a random English word from its database.
+
+The message should show the English word, its transcription, and its translation in Uzbek.
+
+Example: Word: Apple | Transcription: [ˈæpəl] | Translation: Olma
+
+Start Test (/test):
+
+When the "Testni boshlash" button is pressed, the bot initiates a quiz.
+
+The quiz should be a multiple-choice question. The bot provides one English word and four Uzbek translations as inline button options. One of the options is correct, and the other three are incorrect.
+
+The bot must track the user's score (e.g., "To'g'ri javoblar: 5/10").
+
+The bot should provide immediate feedback: "To'g'ri!" or "Xato! To'g'ri javob: [Correct Answer]".
+
+Word Database:
+
+Create a simple and easily editable data structure for the words (e.g., a Python list of dictionaries or a JSON file).
+
+The structure should contain the English word, its transcription, and the Uzbek translation.
+
+Populate it with at least 20-30 English-Uzbek word pairs to start.
+
+Interface and User Experience:
+
+Language: All bot messages, buttons, and commands displayed to the user must be in Uzbek.
+
+Buttons: Use aiogram's ReplyKeyboardMarkup for the main menu and InlineKeyboardMarkup for the test questions. The interface should be intuitive and user-friendly.
+
+Commands: The bot should respond to basic commands like /start, /help, /test, and /yangi_soz.
+
+Hosting and Deployment:
+
+The code must be prepared for deployment on render.com.
+
+Create a requirements.txt file listing all necessary Python libraries (aiogram, etc.).
+
+Set up the main application file (e.g., main.py) to be run as a web service on Render, using webhooks for efficiency. Ensure it reads the Telegram Bot Token from environment variables for security.
+
+Provide a basic README.md file with instructions on how to set up and run the bot.
